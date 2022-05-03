@@ -437,5 +437,5 @@ export default {
     heatmapMode: "row",
     name: "vue-table-col-heatmap",
   }),
-  "Expor Table TSV": TSVExportRenderer,
+  "Export Table TSV": TSVExportRenderer,
 };
