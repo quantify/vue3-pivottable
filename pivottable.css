@@ -8,7 +8,6 @@
 
 
 table.pvtTable {
-    font-size: var(--p-datatable-font-size, 14px);
     text-align: left;
     border-collapse: collapse;
     /* font-family: inherit; */
@@ -21,8 +20,9 @@ table.pvtTable tbody tr th {
     /* Replaced #ebf0f8 */
     border: 1px solid var(--p-datatable-header-cell-border-color);
     /* Replaced #c8d4e3 */
-    font-size: var(--p-datatable-font-size, 14px);
-    padding: 0rem 0.4rem;
+    /* font-size: var(--p-datatable-font-size, 14px); */
+    font-size: 1rem;
+    padding: 0.2rem 0.4rem;
     /* Replaced 5px */
 }
 
@@ -35,14 +35,15 @@ table.pvtTable .pvtTotalLabel {
 }
 
 table.pvtTable tbody tr td {
+    font-size: 1rem !important;
+    padding: 0.2rem 0.8rem !important;
     color: var(--p-datatable-row-color);
     /* Replaced #2a3f5f */
     /* padding: var(--p-datatable-body-cell-padding); */
-    padding: 0.2rem 1rem;
     /* Replaced 3px */
     background-color: var(--p-datatable-row-background);
     /* Replaced #fff */
-    /* border: 1px solid var(--p-datatable-body-cell-border-color); */
+    border: 1px solid var(--p-datatable-border-color);
     /* Uncomment if needed */
     vertical-align: top;
     text-align: right;
