@@ -1,7 +1,6 @@
 {
     "name": "vue3-pivottable",
     "version": "1.0.0",
-    "main": "index.js",
     "types": "index.d.ts",
     "scripts": {
         "dev": "vite",
@@ -11,10 +10,5 @@
         "sortablejs": "^1.10.2",
         "vue": "^3.2.29",
         "vuedraggable": "^4.1.0"
-    },
-    "files": [
-      "index.js",
-      "index.d.ts"
-    ]
-  
+    }
 }
