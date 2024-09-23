@@ -1,9 +1,10 @@
 
-# Vue3 Pivottable for PrimeVue4
+# Vue3 Pivottable for PrimeVue4 - Minimal Typescript support
 
 It is a Vue port of the jQuery-based [PivotTable.js](https://pivottable.js.org/)
 
 The component was styled with primevue4 css variables to integrate with the new architecture.
+Minimal Typescript support was added.
 
 ## Installation
 

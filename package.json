@@ -1,13 +1,20 @@
 {
-  "name": "vue3-pivottable",
-  "version": "1.0.0",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build"
-  },
-  "dependencies": {
-    "sortablejs": "^1.10.2",
-    "vue": "^3.2.29",
-    "vuedraggable": "^4.1.0"
-  }
+    "name": "vue3-pivottable",
+    "version": "1.0.0",
+    "main": "index.js",
+    "types": "index.d.ts",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "dependencies": {
+        "sortablejs": "^1.10.2",
+        "vue": "^3.2.29",
+        "vuedraggable": "^4.1.0"
+    },
+    "files": [
+      "index.js",
+      "index.d.ts"
+    ]
+  
 }
