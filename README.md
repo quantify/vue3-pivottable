@@ -1,12 +1,14 @@
 
-# Vue3 Pivottable
+# Vue3 Pivottable for PrimeVue4
 
 It is a Vue port of the jQuery-based [PivotTable.js](https://pivottable.js.org/)
+
+The component was styled with primevue4 css variables to integrate with the new architecture.
 
 ## Installation
 
 ```shall
-npm i https://github.com/brettcodling/vue3-pivottable
+npm i https://github.com/chikko80/vue3-pivottable
 ```
 
 ## Usage

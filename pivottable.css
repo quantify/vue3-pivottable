@@ -1,14 +1,3 @@
-
-* {
-    box-sizing: border-box
-}
-
-.pvtUi {
-    width: 100%;
-    color: #2a3f5f;
-    font-family: Verdana;
-    border-collapse: collapse;
-} 
 .pvtUi select {
     user-select: none;
     -webkit-user-select: none;
@@ -17,54 +6,68 @@
     -ms-user-select: none;
 }
 
-.pvtUi td.pvtOutput {
-    padding: 6px;
-    vertical-align: top;
-    border: 1px solid #a2b1c6;
-}
 
 table.pvtTable {
-    font-size: 8pt;
+    font-size: var(--p-datatable-font-size, 14px);
     text-align: left;
     border-collapse: collapse;
-    font-family: Verdana;
+    /* font-family: inherit; */
+    /* Inherit font from PrimeVue */
 }
 
 table.pvtTable thead tr th,
 table.pvtTable tbody tr th {
-    background-color: #ebf0f8;
-    border: 1px solid #c8d4e3;
-    font-size: 8pt;
-    padding: 5px;
+    background-color: var(--p-navigation-item-active-background) !important;
+    /* Replaced #ebf0f8 */
+    border: 1px solid var(--p-datatable-header-cell-border-color);
+    /* Replaced #c8d4e3 */
+    font-size: var(--p-datatable-font-size, 14px);
+    padding: 0rem 0.4rem;
+    /* Replaced 5px */
 }
 
 table.pvtTable .pvtColLabel {
     text-align: center;
 }
+
 table.pvtTable .pvtTotalLabel {
     text-align: right;
 }
 
 table.pvtTable tbody tr td {
-    color: #2a3f5f;
-    padding: 3px;
-    background-color: #fff;
-    border: 1px solid #c8d4e3;
+    color: var(--p-datatable-row-color);
+    /* Replaced #2a3f5f */
+    /* padding: var(--p-datatable-body-cell-padding); */
+    padding: 0.2rem 1rem;
+    /* Replaced 3px */
+    background-color: var(--p-datatable-row-background);
+    /* Replaced #fff */
+    /* border: 1px solid var(--p-datatable-body-cell-border-color); */
+    /* Uncomment if needed */
     vertical-align: top;
     text-align: right;
 }
 
+/* total row */
 .pvtTotal,
 .pvtGrandTotal {
     font-weight: bold;
+    background-color: var(--p-primary-200) !important;
+    /* opacity: var(--p-disabled-opacity) !important; */
 }
+
+/* Dark mode styles */
+html.dark .pvtTotal,
+html.dark .pvtGrandTotal {
+    background-color: var(--p-primary-900) !important;
+    /* Adjust this to a suitable color for dark mode */
+}
+
 
 .pvtRowOrder,
 .pvtColOrder {
     cursor: pointer;
-    width: 15px;
-    margin-left: 5px;
-    display: inline-block;
+    /* width: 15px; */
     user-select: none;
     text-decoration: none !important;
     -webkit-user-select: none;
@@ -75,35 +78,42 @@ table.pvtTable tbody tr td {
 
 .pvtAxisContainer,
 .pvtVals {
-    border: 1px solid #a2b1c6;
-    background: #fff;
-    padding: 5px;
-    min-width: 20px;
-    min-height: 20px;
+    border: 1px solid var(--p-datatable-border-color);
+    /* border: 1px solid var(--p-list-option-icon-color); */
+    /* border: 1px solid #636363; */
+    /* Replaced #a2b1c6 */
+    background: var(--p-datatable-row-background);
+    /* Replaced #fff */
+    /* padding: var(--p-datatable-header-padding); */
+    padding: 0.5rem;
+    /* Replaced 5px */
+    /* min-width: 20px; */
+    /* min-height: 20px; */
 }
-.pvtVals.pvtText {
-    vertical-align: middle;
-    font-size: 15px;
-    font-weight: bold;
-    color: #000000;
-    user-select: none;
-    padding-left: 16px;
-    text-align: start;
-}
+
 
 .pvtRenderers {
-    border: 1px solid #a2b1c6;
+    background-color: var(--p-surface-0) !important;
+    border: 1px solid var(--p-datatable-border-color);
+    /* Replaced #a2b1c6 */
     user-select: none;
 }
 
+/* Dark mode styles */
+html.dark .pvtRenderers {
+    background-color: var(--p-surface-900) !important;
+}
+
+
 .pvtDropdown {
-    border: 1px solid #a2b1c6;
+    border: 1px solid var(--p-datatable-border-color);
+    /* Replaced #a2b1c6 */
     align-items: center;
     display: block;
     background-color: transparent;
     background-image: none;
-    border-radius: 0px;
-    padding: 0px 0px 0px 3px;
+    border-radius: 0;
+    padding: 0 0 0 3px;
     height: 40px;
     font-size: 15px;
     font-weight: bold;
@@ -118,24 +128,10 @@ table.pvtTable tbody tr td {
 }
 
 .pvtRenderers .pvtDropdown {
-    padding: 0px 0px 0px 12px;
+    padding: 0 0 0 12px;
     border: none;
     width: 100%;
-    margin: 0px;
-}
-
-.pvtDropdown:last-child {
-    margin-bottom: 0px;
-}
-
-.pvtVals {
-    white-space: nowrap;
-    vertical-align: top;
-    padding-bottom: 12px;
-}
-
-.pvtRows {
-    height: 35px;
+    margin: 0;
 }
 
 .pvtAxisContainer li {
@@ -143,25 +139,17 @@ table.pvtTable tbody tr td {
     list-style-type: none;
     cursor: move;
 }
-.pvtAxisContainer li.pvtPlaceholder {
-    -webkit-border-radius: 5px;
-    padding: 3px 15px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-    border: 1px dashed #a2b1c6;
-}
-.pvtAxisContainer li.pvtPlaceholder span.pvtAttr {
-    display: none;
-}
+
+
 
 .pvtAxisContainer li span.pvtAttr {
     -webkit-text-size-adjust: 100%;
-    background: #f3f6fa;
-    border: 2px dashed #c8d4e3;
-    padding: 4px 7px;
+    background: var(--p-datatable-header-cell-background);
+    /* Replaced #f3f6fa */
+    border: 2px dashed var(--p-datatable-border-color);
+    /* Replaced #c8d4e3 */
+    padding: 8px 12px;
     white-space: nowrap;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
     border-radius: 5px;
     user-select: none;
     -webkit-user-select: none;
@@ -169,94 +157,72 @@ table.pvtTable tbody tr td {
     -khtml-user-select: none;
     -ms-user-select: none;
 }
-.pvtAxisContainer li span.pvtAttr.sortonly {
-    border: 1px solid #c8d4e3;
-}
-.pvtAxisContainer li span.pvtAttr.disabled {
-    border: 1px solid #c8d4e3;
-    color: #c5c5c5;
-    cursor: not-allowed;
-}
+
+
 .pvtTriangle {
     cursor: pointer;
-    color: #506784;
+    color: var(--p-button-primary-background);
+    /* No exact variable, kept as is */
 }
 
 .pvtHorizList li {
     display: inline-block;
 }
+
 .pvtVertList {
     vertical-align: top;
 }
 
-.pvtFilteredAttribute {
-    font-style: italic;
-}
-
-.sortable-chosen .pvtFilterBox {
-    display: none !important;
-}
-
-.pvtFilterTextClear {
-    position: absolute;
-    right: 5px;
-    top: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    text-decoration: none !important;
-}
-
-/* .pvtDragHandle {
-    position: absolute;
-    left: 5px;
-    top: 5px;
-    font-size: 18px;
-    cursor: move;
-    color: #a2b1c6;
-} */
-
 .pvtButton {
     display: inline-block;
-    color: #506784;
+    color: var(--p-datatable-row-color);
+    /* Replaced #506784 */
     border-radius: 5px;
     padding: 3px 6px;
-    background: #fff;
-    border: 1px solid;
-    border-color: #c8d4e3;
+    background: var(--p-datatable-row-background);
+    /* Replaced #fff */
+    border: 1px solid var(--p-datatable-border-color);
+    /* Replaced #c8d4e3 */
     font-size: 14px;
-    margin: 3px 3px 6px 0px;
+    margin: 3px 3px 6px 0;
     transition: 0.34s all cubic-bezier(0.19, 1, 0.22, 1);
     text-decoration: none !important;
 }
 
 .pvtButton:hover {
-    background: #e2e8f0;
-    border-color: #a2b1c6;
+    background: var(--p-datatable-row-hover-background);
+    /* Closest match for hover background */
+    border-color: var(--p-datatable-border-color);
+    /* Replaced #a2b1c6 */
 }
 
 .pvtButton:active {
-    background: #d1dae6;
+    background: var(--p-datatable-row-selected-background);
+    /* Closest match for active background */
 }
 
 .pvtFilterBox input {
-    border: 1px solid #c8d4e3;
+    border: 1px solid var(--p-datatable-body-cell-border-color);
+    /* Replaced #c8d4e3 */
     border-radius: 5px;
-    color: #506784;
+    color: var(--p-datatable-row-color);
+    /* Replaced #506784 */
     padding: 0 3px;
     font-size: 14px;
 }
 
 .pvtFilterBox input:focus {
-    border-color: #119dff;
+    border-color: var(--p-datatable-row-focus-ring-color);
+    /* Closest match */
     outline: none;
 }
 
 .pvtFilterBox {
     z-index: 100;
-    border: 1px solid #506784;
-    max-width: 600px;
-    min-width: 210px;
-    background-color: #fff;
+    border: 1px solid var(--p-datatable-border-color);
+    /* Replaced #506784 */
+    background-color: var(--p-datatable-row-background);
+    /* Replaced #fff */
     position: absolute;
     padding: 6px;
     user-select: none;
@@ -269,8 +235,9 @@ table.pvtTable tbody tr td {
 
 .pvtFilterBox input[type='text'] {
     display: block;
-    width: 100%;
-    color: #2a3f5f;
+    /* width: 100%; */
+    color: var(--p-datatable-row-color);
+    /* Replaced #2a3f5f */
     margin-bottom: 5px;
     padding: 6px;
     /* border-radius: 4px; */
@@ -287,7 +254,8 @@ table.pvtTable tbody tr td {
     overflow-y: scroll;
     width: 100%;
     max-height: 30vh;
-    border-top: 1px solid #dfe8f3;
+    border-top: 1px solid var(--p-datatable-border-color);
+    /* Replaced #dfe8f3 */
 }
 
 .pvtCheckContainer p {
@@ -298,10 +266,17 @@ table.pvtTable tbody tr td {
 }
 
 .pvtCheckContainer p.selected {
-    background: #ebf0f8;
+    background: var(--p-datatable-header-cell-background);
+    /* Replaced #ebf0f8 */
     min-width: 100%;
     width: max-content;
 }
+
+.pvtCheckContainer p.selected input {
+    margin-right: 0.5rem;
+}
+
+
 
 .pvtOnly {
     display: none;
@@ -321,6 +296,7 @@ table.pvtTable tbody tr td {
 .pvtCheckContainer p:hover .pvtOnly {
     display: block;
 }
+
 .pvtCheckContainer p:hover .pvtOnlySpacer {
     display: none;
 }
