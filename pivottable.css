@@ -22,13 +22,13 @@ table.pvtTable tbody tr th {
     border: 1px solid var(--p-datatable-header-cell-border-color);
     /* Replaced #c8d4e3 */
     /* font-size: var(--p-datatable-font-size, 14px); */
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding: 0.2rem 0.1rem;
     /* Replaced 5px */
 }
 
 td.pvtOutput > table > thead > tr:not(:first-child) th{
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 
 table.pvtTable tbody tr:hover td {
