@@ -10,6 +10,7 @@
 table.pvtTable {
     text-align: left;
     border-collapse: collapse;
+    width: 100%;
     /* font-family: inherit; */
     /* Inherit font from PrimeVue */
 }
@@ -98,11 +99,13 @@ html.dark .pvtGrandTotal {
     border: 1px solid var(--p-datatable-border-color);
     /* Replaced #a2b1c6 */
     user-select: none;
+    width: 16rem;
 }
 
 /* Dark mode styles */
 html.dark .pvtRenderers {
     background-color: var(--p-surface-900) !important;
+    width: 16rem;
 }
 
 
