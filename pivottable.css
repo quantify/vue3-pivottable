@@ -27,6 +27,11 @@ table.pvtTable tbody tr th {
     /* Replaced 5px */
 }
 
+table.pvtTable tbody tr:hover td {
+    background-color: var(--p-surface-700);
+}
+
+
 table.pvtTable .pvtColLabel {
     text-align: center;
 }
