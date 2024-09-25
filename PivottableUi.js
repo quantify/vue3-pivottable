@@ -47,6 +47,13 @@ export default {
     },
     ...common.props,
   },
+  emits: [
+    "update:items",
+    "update:rows",
+    "update:cols",
+    "update:aggregatorName",
+    "update:vals",
+  ],
   computed: {
     renderers() {
       return TableRenderer;
@@ -143,6 +150,40 @@ export default {
       this.unusedOrder = this.unusedAttrs;
       Object.keys(this.attrValues).map(this.assignValue);
       Object.keys(this.openStatus).map(this.assignValue);
+    },
+    // Watch for changes in items
+    "propsData.items": {
+      handler(newVal) {
+        this.$emit("update:items", newVal);
+      },
+      deep: true,
+    },
+    // Watch for changes in rows
+    "propsData.rows": {
+      handler(newVal) {
+        this.$emit("update:rows", newVal);
+      },
+      deep: true,
+    },
+    // Watch for changes in cols
+    "propsData.cols": {
+      handler(newVal) {
+        this.$emit("update:cols", newVal);
+      },
+      deep: true,
+    },
+    // Watch for changes in aggregatorName
+    "propsData.aggregatorName": {
+      handler(newVal) {
+        this.$emit("update:aggregatorName", newVal);
+      },
+    },
+    // Watch for changes in vals
+    "propsData.vals": {
+      handler(newVal) {
+        this.$emit("update:vals", newVal);
+      },
+      deep: true,
     },
   },
   methods: {
