@@ -3,7 +3,6 @@
 
 It is a Vue port of the jQuery-based [PivotTable.js](https://pivottable.js.org/)
 
-The component was styled with primevue4 css variables to integrate with the new architecture.
 Minimal Typescript support was added.
 
 Additionally the component emits events when internal settings have changed
