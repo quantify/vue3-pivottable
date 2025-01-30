@@ -55,8 +55,13 @@ export default {
     "update:vals",
   ],
   computed: {
+    rendererItems () {
+      return Object.keys(this.renderers || {}).length > 0
+        ? this.renderers
+        : TableRenderer
+    },
     renderers() {
-      return TableRenderer;
+      return this.rendererItems;
     },
     numValsAllowed() {
       return (
@@ -391,7 +396,12 @@ export default {
   },
   render() {
     if (this.data.length < 1) return;
-    const rendererName = this.propsData.rendererName || this.rendererName;
+
+    let rendererName = this.propsData.rendererName || this.rendererName;
+    if (!this.renderers[rendererName]) {
+      rendererName = Object.keys(this.renderers)[0];
+    }
+
     const aggregatorName = this.propsData.aggregatorName || this.aggregatorName;
     const vals = this.propsData.vals;
     const unusedAttrsCell = this.makeDnDCell(

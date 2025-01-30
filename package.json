@@ -1,5 +1,5 @@
 {
-    "name": "vue3-pivottable",
+    "name": "@quantify/vue3-pivottable",
     "version": "1.0.0",
     "types": "index.d.ts",
     "scripts": {
@@ -10,5 +10,9 @@
         "sortablejs": "^1.10.2",
         "vue": "^3.2.29",
         "vuedraggable": "^4.1.0"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^5.2.1",
+        "vite": "^6.0.11"
     }
 }

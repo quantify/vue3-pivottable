@@ -1,6 +1,7 @@
 import { PivotData } from "./helper/utils";
 import defaultProps from "./helper/defaultProps";
 import * as Vue from "vue";
+
 function redColorScaleGenerator(values) {
   const min = Math.min.apply(Math, values);
   const max = Math.max.apply(Math, values);
@@ -10,6 +11,7 @@ function redColorScaleGenerator(values) {
     return { backgroundColor: `rgb(255,${nonRed},${nonRed})` };
   };
 }
+
 function makeRenderer(opts = {}) {
   const TableRenderer = {
     name: opts.name,

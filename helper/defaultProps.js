@@ -74,5 +74,9 @@ export default {
         );
       },
     },
+    renderers: {
+      type: Object,
+      default: ({})
+    }
   },
 };
