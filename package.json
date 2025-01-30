@@ -1,6 +1,6 @@
 {
     "name": "@quantify/vue3-pivottable",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "types": "index.d.ts",
     "scripts": {
         "dev": "vite",
