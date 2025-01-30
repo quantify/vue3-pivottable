@@ -1,23 +1,12 @@
 
-# Vue3 Pivottable - Minimal Typescript support
+# Vue3 Pivottable
 
-It is a Vue port of the jQuery-based [PivotTable.js](https://pivottable.js.org/)
-
-Minimal Typescript support was added.
-
-Additionally the component emits events when internal settings have changed
-```
-@update:items
-@update:rows
-@update:cols
-@update:aggregatorName
-@update:vals
-```
+Drop-in replacement of [vue-pivottable](https://github.com/Seungwoo321/vue-pivottable) with Vue3 support.
 
 ## Installation
 
 ```shall
-npm i https://github.com/chikko80/vue3-pivottable
+npm install @quantify/vue3-pivottable
 ```
 
 ## Usage
@@ -56,6 +45,25 @@ export default {
 </template>
 ```
 
+## Events (added)
+
+Additionally the component emits events when internal settings have changed
+
+```
+@update:items
+@update:rows
+@update:cols
+@update:aggregatorName
+@update:vals
+```
+
 ## License
 
 MIT
+
+## Credits
+
+* [PivotTable.js](https://pivottable.js.org/)
+* [Seungwoo321](https://github.com/Seungwoo321/vue-pivottable)
+* [brettcodling](https://github.com/brettcodling/vue3-pivottable)
+* [chikko80](https://github.com/chikko80/vue3-pivottable)
